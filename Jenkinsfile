@@ -1,7 +1,7 @@
 pipeline {
   agent { label 'label1' }
   stages {
-    stage ('BUILD') {
+    stage ('CLONE') {
       steps {
         echo "cloning java project from git"
         sh ''' 
@@ -9,7 +9,7 @@ pipeline {
 	   '''
         }
     }
-   stage ('Clone') {
+   stage ('BUILD') {
 		agent { label 'label1' }
 		steps {
 			echo "Build a binary"
