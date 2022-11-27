@@ -4,9 +4,7 @@ pipeline {
     stage ('CLONE') {
       steps {
         echo "cloning java project from git"
-        sh ''' 
-		    git clone https://github.com/cpdani14/test2_java.git
-	   '''
+        	git branch: 'main', url: 'https://github.com/cpdani14/test2_java.git'
         }
     }
    stage ('BUILD') {
